@@ -1,0 +1,20 @@
+<svg viewBox="172.8512 170.8032 167.936 168.96" xmlns="http://www.w3.org/2000/svg" id="Layer_1" style="max-height: 500px" width="167.936" height="168.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b20025;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect height="15.29" width="15.29" y="309.51" x="187.2" class="cls-1"/>
+    <rect height="15.29" width="15.29" y="187.2" x="187.2" class="cls-1"/>
+    <rect height="107.03" width="15.29" y="202.49" x="171.91" class="cls-1"/>
+    <rect transform="translate(634.32 634.32) rotate(-180)" height="15.29" width="15.29" y="309.51" x="309.51" class="cls-1"/>
+    <rect transform="translate(634.32 389.68) rotate(-180)" height="15.29" width="15.29" y="187.2" x="309.51" class="cls-1"/>
+    <rect transform="translate(664.9 512) rotate(-180)" height="107.03" width="15.29" y="202.49" x="324.8" class="cls-1"/>
+    <rect transform="translate(435.55 -76.45) rotate(90)" height="107.03" width="15.29" y="126.04" x="248.36" class="cls-1"/>
+    <rect transform="translate(588.45 76.45) rotate(90)" height="107.03" width="15.29" y="278.93" x="248.36" class="cls-1"/>
+  </g>
+  <path d="M205.73,241.5h33.36v29.41h-33.36v-29.41ZM239.09,212.49h33.36v87.02h-33.36v-87.02ZM272.45,241.5h33.82v29.41h-33.82v-29.41Z" class="cls-1"/>
+</svg>

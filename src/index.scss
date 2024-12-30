@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-weight: 400;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'cubic';
+  src: url('./assets/fonts/cubic.ttf');
+}
+
+@font-face {
+  font-family: 'pixel';
+  src: url('./assets/fonts/pixel.ttf');
+}
+
+.border-ridge {
+  border-style: ridge;
+}
+
+
+.border-groove {
+  border-style: groove;
+}
+
+.border-outset{
+  border-left-style: inset;
+  border-top-style: outset;
+  border-bottom-style: inset;
+  border-right-style: outset;
+}
+
+@mixin step1( $width, $color ) {
+  box-shadow: 
+    $width 0 $color, 
+    -$width 0 $color,
+    0 (-$width) $color, 
+    0 $width $color;
+  margin: $width auto;
+}
+/*@mixin step2( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $color,
+    -2*$width 0 $color,
+    0 (-2*$width) $color,
+    0 2*$width $color,
+    $width $width $color,
+    -$width $width $color,
+    $width (-$width) $color,
+    -$width (-$width) $color;
+}*/
+@mixin step2v2( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $color,
+    -2*$width 0 $color,
+    0 (-2*$width) $color,
+    0 2*$width $color, 
+    0 0 0 $width $color;
+    margin: 2*$width auto;
+}
+/*@mixin step3( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $bgcolor,
+    -2*$width 0 $bgcolor,
+    0 (-2*$width) $bgcolor,
+    0 2*$width $bgcolor, 
+    0 0 0 $width $bgcolor,
+    3*$width 0 $color,
+    -3*$width 0 $color, 
+    0 3*$width $color,
+    0 (-3*$width) $color, 
+    -2*$width (-$width) $color,
+    -$width (-2*$width) $color,
+    $width (-2*$width) $color,
+    2*$width (-$width) $color,
+    2*$width $width $color,
+    $width 2*$width $color, 
+    -$width 2*$width $color,
+    -2*$width $width $color;
+}*/
+@mixin step3v2( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $bgcolor,
+    -2*$width 0 $bgcolor,
+    0 (-2*$width) $bgcolor,
+    0 2*$width $bgcolor, 
+    0 0 0 $width $bgcolor,
+    3*$width 0 $color,
+    -3*$width 0 $color, 
+    0 3*$width $color,
+    0 (-3*$width) $color,
+    0 (-$width) 0 $width $color,
+    0 $width 0 $width $color,
+    $width 0 0 $width $color,
+    -$width 0 0 $width $color;
+  margin: 3*$width auto;
+}
+@mixin step4( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $bgcolor,
+    -2*$width 0 $bgcolor,
+    0 (-2*$width) $bgcolor,
+    0 2*$width $bgcolor, 
+    0 0 0 $width $bgcolor,
+    3*$width 0 $bgcolor,
+    -3*$width 0 $bgcolor, 
+    0 3*$width $bgcolor,
+    0 (-3*$width) $bgcolor,
+    0 (-$width) 0 $width $bgcolor,
+    0 $width 0 $width $bgcolor,
+    $width 0 0 $width $bgcolor,
+    -$width 0 0 $width $bgcolor,
+    4*$width 0 $color, 
+    -4*$width 0 $color,
+    0 (-4*$width) $color, 
+    0 4*$width $color,
+    2*$width 0 0 $width $color,
+    -2*$width 0 0 $width $color,
+    0 2*$width 0 $width $color,
+    0 (-2*$width) 0 $width $color,
+    0 0 0 2*$width $color;
+    margin: 4*$width auto;
+}
+@mixin other( $width, $color, $bgcolor ) {
+  box-shadow:
+    4*$width 0 $bgcolor, 
+    -4*$width 0 $bgcolor, 
+    0 (-4*$width) $bgcolor, 
+    0 4*$width $bgcolor,
+    $width 0 0 2*$width $bgcolor,
+    -$width 0 0 2*$width $bgcolor,
+    0 (-$width) 0 2*$width $bgcolor,
+    0 $width 0 2*$width $bgcolor,
+    5*$width 0 $color, 
+    -5*$width 0 $color,
+    0 (-5*$width) $color, 
+    0 5*$width $color,
+    0 0 0 3*$width $color,
+    0 2*$width 0 2*$width $color,
+    0 (-2*$width) 0 2*$width $color,
+    2*$width 0 0 2*$width $color,
+    (-2*$width) 0 0 2*$width $color;
+    margin: 5*$width auto;
+}
+.lvl1 {
+  @include other( 4px, orange, white );
+}
+.lvl2 {
+  @include step2v2( 4px, #B20025, white );
+}
+.lvl3 {
+  @include step3v2( 3px, red, white );
+}
+.lvl4 {
+  @include step4( 5px, green, white );
+}
+.other {
+  @include step1( 6px, black );
+}
+
+.border-primary {
+  &.border-bold{
+    @include step2v2( 4px, #B20025, white );
+  }
+
+  &.border-thick{
+    @include step2v2( 2px, #B20025, white );
+  }
+}
+
+.border-secondary {
+  &.border-bold{
+    @include step2v2( 4px, white, rgba(0, 0, 0, 0.8) );
+  }
+
+  &.border-thick{
+    @include step2v2( 2px, white, rgba(0, 0, 0, 0.8) );
+  }
+}
+
+.dotted-border {
+  background-image: 
+    linear-gradient(to right, #B20025 6px, transparent 6px),
+    linear-gradient(to bottom, #B20025 6px, transparent 6px),
+    linear-gradient(to left, #B20025 6px, transparent 6px),
+    linear-gradient(to top, #B20025 6px, transparent 6px);
+  background-size: 6.5px 6px, 6px 6.5px, 6.5px 6px, 6px 6.5px;
+  background-position: top, right, bottom, left;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+}
+
+.layout-bg{
+  background-image: url('./assets/svgs/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

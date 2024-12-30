@@ -1,0 +1,10 @@
+services:
+  snake_game:
+    container_name: snake_game
+    image: snake_game
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 4000:80
