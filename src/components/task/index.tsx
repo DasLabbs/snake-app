@@ -108,18 +108,20 @@ const Task = (props: TaskProps) => {
                 <p className="text-base font-medium text-white">{countdown}</p>
               </div>
             </div>
-            <div className="flex w-full flex-col items-center justify-center gap-4">
-              {TASKS.map((task) => (
-                <TaskItem
-                  disabled={task.disabled || false}
-                  key={task.id}
-                  task={task.task}
-                  name={task.name}
-                  description={task.description}
-                  img={task.img}
-                  onClick={task.onClick}
-                />
-              ))}
+            <div className="flex w-full flex-col items-center justify-center">
+              <div className="flex flex-col gap-4">
+                {TASKS.map((task) => (
+                  <TaskItem
+                    disabled={task.disabled || false}
+                    key={task.id}
+                    task={task.task}
+                    name={task.name}
+                    description={task.description}
+                    img={task.img}
+                    onClick={task.onClick}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

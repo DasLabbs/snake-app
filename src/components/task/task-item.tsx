@@ -22,7 +22,7 @@ const TaskItem = (props: TaskItemProps) => {
       </Button>
       <div className="flex flex-col items-start gap-1">
         <div className="text-[10px] text-white ss:text-xs">
-          <div>{task}</div>
+          <div className="task-title">{task}</div>
           <p>{name}</p>
           {description && <p>{description}</p>}
         </div>

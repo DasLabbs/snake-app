@@ -9,8 +9,6 @@ import SwitchLangBtn from './switch-lang-btn';
 const Layout = () => {
   const { language } = useTranslation();
 
-  console.log('Layout rendered: ', language);
-
   return (
     <UserProvider>
       <div className="border-outset layout-bg relative mx-auto flex h-dvh w-full items-center justify-center overflow-hidden md:w-[450px]">
